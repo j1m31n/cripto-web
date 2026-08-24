@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Central</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 15px; background: #f4f6f8; color: #333; }
+    header { background: #0d1b2a; color: white; padding: 20px; text-align: center; border-radius: 8px; }
+    .box { background: white; padding: 15px; margin: 15px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Crypto Central</h1>
+    <div id="google_translate_element"></div>
+  </header>
+
+  <div class="box">
+    <h3>Cotizaciones en Vivo</h3>
+    <script src="https://widgets.coingecko.com/gecko-coin-price-static-headline-widget.js"></script>
+    <gecko-coin-price-static-headline-widget coin-ids="bitcoin,ethereum,tether,binancecoin,solana" currency="usd" locale="es"></gecko-coin-price-static-headline-widget>
+  </div>
+
+  <div class="box" id="adsterra-space">
+    <p>Espacio para publicidad Adsterra</p>
+  </div>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'es'}, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

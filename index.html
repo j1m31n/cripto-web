@@ -38,8 +38,8 @@
     .card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 18px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
     .card-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; }
 
-    /* Espacios integrados para banners publicitarios fijos */
-    .ad-banner-slot { text-align: center; min-height: 90px; margin: 15px 0; display: flex; justify-content: center; align-items: center; }
+    /* Estilos de las casillas publicitarias */
+    .ad-banner-slot { text-align: center; margin: 15px auto; display: flex; justify-content: center; align-items: center; overflow: hidden; }
 
     footer { text-align: center; padding: 25px; background: #111827; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 20px; }
   </style>
@@ -76,10 +76,19 @@
     </div>
   </div>
 
-  <!-- Banner Publicitario Superior (Superior Fijo) -->
+  <!-- Banner Publicitario Superior Horizontal (468x60) -->
   <div style="max-width: 1400px; margin: 0 auto; padding: 10px 20px 0;">
     <div class="ad-banner-slot">
-      <script src="https://pl31017202.profitableratecpmnetwork.com/b9/57/cb/b957cbd9d1bd9f15f3751bc709a8e079.js"></script>
+      <script>
+        atOptions = {
+          'key' : '6f37c2f4df001045783f89604914d1d5',
+          'format' : 'iframe',
+          'height' : 60,
+          'width' : 468,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highrevenueformat.com/6f37c2f4df001045783f89604914d1d5/invoke.js"></script>
     </div>
   </div>
 
@@ -110,9 +119,18 @@
         </div>
       </div>
 
-      <!-- Banner Publicitario Intermedio (Entre Gráfico y Noticias) -->
+      <!-- Banner Publicitario Central Rectangular (300x250) -->
       <div class="ad-banner-slot">
-        <script src="https://pl31017202.profitableratecpmnetwork.com/b9/57/cb/b957cbd9d1bd9f15f3751bc709a8e079.js"></script>
+        <script>
+          atOptions = {
+            'key' : 'e47511606dbb9249a32cf029f22b26d2',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/e47511606dbb9249a32cf029f22b26d2/invoke.js"></script>
       </div>
 
       <div class="card">
@@ -134,11 +152,23 @@
       </div>
     </main>
 
-    <!-- Columna Derecha: Tendencias y Banner Lateral -->
+    <!-- Columna Derecha: Banner Lateral y Tendencias -->
     <aside>
-      <!-- Banner Publicitario Lateral -->
-      <div class="ad-banner-slot">
-        <script src="https://pl31017202.profitableratecpmnetwork.com/b9/57/cb/b957cbd9d1bd9f15f3751bc709a8e079.js"></script>
+      <!-- Banner Publicitario Lateral Rectangular (300x250) -->
+      <div class="card" style="text-align: center;">
+        <div class="card-title">📢 Publicidad</div>
+        <div class="ad-banner-slot">
+          <script>
+            atOptions = {
+              'key' : 'e47511606dbb9249a32cf029f22b26d2',
+              'format' : 'iframe',
+              'height' : 250,
+              'width' : 300,
+              'params' : {}
+            };
+          </script>
+          <script src="https://www.highrevenueformat.com/e47511606dbb9249a32cf029f22b26d2/invoke.js"></script>
+        </div>
       </div>
 
       <div class="card">
@@ -178,6 +208,9 @@
   <footer>
     <p>&copy; 2026 Crypto Central - Noticias financieras y datos de mercado en tiempo real.</p>
   </footer>
+
+  <!-- Anuncio Flotante Social Bar activo en segundo plano -->
+  <script src="https://pl31017202.profitableratecpmnetwork.com/b9/57/cb/b957cbd9d1bd9f15f3751bc709a8e079.js"></script>
 
   <!-- Traductor Google -->
   <script type="text/javascript">

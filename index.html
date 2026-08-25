@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crypto Central</title>
+  <title>Crypto Central | Noticias y Cotizaciones</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 15px; background: #f4f6f8; color: #333; }
     header { background: #0d1b2a; color: white; padding: 20px; text-align: center; border-radius: 8px; margin-bottom: 15px; }
-    .box { background: white; padding: 15px; margin: 15px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+    .box { background: white; padding: 15px; margin: 15px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    h3 { margin-top: 0; text-align: center; color: #0d1b2a; }
   </style>
 </head>
 <body>
 
   <header>
     <h1>Crypto Central</h1>
-    <p>Cotizaciones cripto en tiempo real</p>
-    <div id="google_translate_element"></div>
+    <p>Noticias y Mercado Cripto en Tiempo Real</p>
   </header>
 
-  <!-- Widget de Cotizaciones Cripto -->
+  <!-- Precios en vivo -->
   <div class="box">
-    <h3>Mercado en Vivo</h3>
+    <h3>Cotizaciones del Mercado</h3>
     <div class="tradingview-widget-container">
       <div class="tradingview-widget-container__widget"></div>
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
@@ -29,31 +29,37 @@
           { "proName": "BITSTAMP:BTCUSD", "title": "Bitcoin" },
           { "proName": "BITSTAMP:ETHUSD", "title": "Ethereum" },
           { "proName": "BINANCE:SOLUSD", "title": "Solana" },
-          { "proName": "BINANCE:BNBUSD", "title": "BNB" },
           { "proName": "BINANCE:XRPUSD", "title": "XRP" }
         ],
-        "showSymbolLogo": true,
+        "showSymbolLogo": true, "colorTheme": "light", "locale": "es"
+      }
+      </script>
+    </div>
+  </div>
+
+  <!-- Anuncio de Adsterra -->
+  <div class="box">
+    <script src="https://pl31017202.profitableratecpmnetwork.com/b9/57/cb/b957cbd9d1bd9f15f3751bc709a8e079.js"></script>
+  </div>
+
+  <!-- Noticias Automáticas 24/7 -->
+  <div class="box">
+    <h3>Últimas Noticias del Mercado</h3>
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+      {
+        "feedMode": "all_symbols",
         "isTransparent": false,
-        "displayMode": "adaptive",
+        "displayMode": "regular",
+        "width": "100%",
+        "height": "500",
         "colorTheme": "light",
         "locale": "es"
       }
       </script>
     </div>
   </div>
-
-  <!-- Publicidad de Adsterra -->
-  <div class="box" id="adsterra-space">
-    <script src="https://pl31017202.profitableratecpmnetwork.com/b9/57/cb/b957cbd9d1bd9f15f3751bc709a8e079.js"></script>
-  </div>
-
-  <!-- Traductor Google -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'es'}, 'google_translate_element');
-    }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

@@ -3,24 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crypto Central | Noticias y Cotizaciones</title>
+  
+  <!-- Optimización SEO -->
+  <title>Crypto Central | Portal de Noticias Cripto y Mercado en Vivo</title>
+  <meta name="description" content="Información de criptomonedas en vivo 24/7. Noticias globales de Bitcoin, Ethereum, altcoins, gráficos interactivos en tiempo real y análisis del mercado financiero.">
+  <meta name="keywords" content="criptomonedas, bitcoin, ethereum, noticias cripto, cotizaciones en vivo, trading, blockchain, mercado financiero">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Crypto Central">
+  
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Crypto Central - Noticias y Mercado Cripto 24/7">
+  <meta property="og:description" content="Sigue el precio del Bitcoin, Ethereum y las últimas noticias globales en tiempo real.">
+  <meta property="og:url" content="https://j1m31n.github.io/cripto-web/">
+  
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 15px; background: #f4f6f8; color: #333; }
-    header { background: #0d1b2a; color: white; padding: 20px; text-align: center; border-radius: 8px; margin-bottom: 15px; }
-    .box { background: white; padding: 15px; margin: 15px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    h3 { margin-top: 0; text-align: center; color: #0d1b2a; }
+    :root {
+      --bg-color: #0b0e14;
+      --card-bg: #151a23;
+      --accent-color: #38bdf8;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --border-color: #262d3d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
+
+    header { background: #111827; border-bottom: 1px solid var(--border-color); padding: 15px 25px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 15px; }
+    .logo { font-size: 1.6rem; font-weight: 800; color: var(--accent-color); letter-spacing: -0.5px; }
+    .logo span { color: #fff; }
+
+    /* Selector de idioma */
+    #google_translate_element { background: #1f2937; padding: 4px 8px; border-radius: 6px; border: 1px solid var(--border-color); }
+
+    .ticker-container { border-bottom: 1px solid var(--border-color); background: #111827; }
+
+    /* Estructura de la página */
+    .main-container { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 20px; max-width: 1400px; margin: 0 auto; }
+    
+    @media (min-width: 992px) {
+      .main-container { grid-template-columns: 2.5fr 1fr; }
+    }
+
+    .card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 18px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+    .card-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+
+    .ad-container { text-align: center; min-height: 100px; display: flex; justify-content: center; align-items: center; background: #0f172a; border-radius: 8px; padding: 10px; }
+
+    footer { text-align: center; padding: 25px; background: #111827; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 20px; }
   </style>
+
+  <!-- Datos estructurados Google Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    "name": "Crypto Central",
+    "url": "https://j1m31n.github.io/cripto-web/"
+  }
+  </script>
 </head>
 <body>
 
+  <!-- Encabezado con Traductor -->
   <header>
-    <h1>Crypto Central</h1>
-    <p>Noticias y Mercado Cripto en Tiempo Real</p>
+    <div class="logo">⚡ Crypto<span>Central</span></div>
+    <div id="google_translate_element"></div>
   </header>
 
-  <!-- Precios en vivo -->
-  <div class="box">
-    <h3>Cotizaciones del Mercado</h3>
+  <!-- Cinta superior de precios -->
+  <div class="ticker-container">
     <div class="tradingview-widget-container">
       <div class="tradingview-widget-container__widget"></div>
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
@@ -29,37 +82,129 @@
           { "proName": "BITSTAMP:BTCUSD", "title": "Bitcoin" },
           { "proName": "BITSTAMP:ETHUSD", "title": "Ethereum" },
           { "proName": "BINANCE:SOLUSD", "title": "Solana" },
-          { "proName": "BINANCE:XRPUSD", "title": "XRP" }
+          { "proName": "BINANCE:XRPUSD", "title": "XRP" },
+          { "proName": "BINANCE:BNBUSD", "title": "BNB" },
+          { "proName": "BINANCE:ADAUSD", "title": "Cardano" }
         ],
-        "showSymbolLogo": true, "colorTheme": "light", "locale": "es"
-      }
-      </script>
-    </div>
-  </div>
-
-  <!-- Anuncio de Adsterra -->
-  <div class="box">
-    <script src="https://pl31017202.profitableratecpmnetwork.com/b9/57/cb/b957cbd9d1bd9f15f3751bc709a8e079.js"></script>
-  </div>
-
-  <!-- Noticias Automáticas 24/7 -->
-  <div class="box">
-    <h3>Últimas Noticias del Mercado</h3>
-    <div class="tradingview-widget-container">
-      <div class="tradingview-widget-container__widget"></div>
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
-      {
-        "feedMode": "all_symbols",
-        "isTransparent": false,
-        "displayMode": "regular",
-        "width": "100%",
-        "height": "500",
-        "colorTheme": "light",
+        "showSymbolLogo": true,
+        "colorTheme": "dark",
+        "isTransparent": true,
+        "displayMode": "adaptive",
         "locale": "es"
       }
       </script>
     </div>
   </div>
+
+  <!-- Contenido Principal -->
+  <div class="main-container">
+    
+    <!-- Columna Izquierda: Gráfico y Noticias -->
+    <main>
+      <!-- Gráfico interactivo -->
+      <div class="card">
+        <div class="card-title">📈 Mercado e Indicadores Avanzados</div>
+        <div class="tradingview-widget-container" style="height:480px;">
+          <div id="tradingview_chart" style="height:100%;"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+          <script type="text/javascript">
+          new TradingView.widget({
+            "autosize": true,
+            "symbol": "BITSTAMP:BTCUSD",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "es",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "allow_symbol_change": true,
+            "container_id": "tradingview_chart"
+          });
+          </script>
+        </div>
+      </div>
+
+      <!-- Feed de Noticias Automáticas 24/7 -->
+      <div class="card">
+        <div class="card-title">🌐 Cobertura de Noticias Globales</div>
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+          {
+            "feedMode": "all_symbols",
+            "colorTheme": "dark",
+            "isTransparent": true,
+            "displayMode": "regular",
+            "width": "100%",
+            "height": "650",
+            "locale": "es"
+          }
+          </script>
+        </div>
+      </div>
+    </main>
+
+    <!-- Columna Derecha: Anuncio y Panel de Monedas -->
+    <aside>
+      <!-- Publicidad de Adsterra -->
+      <div class="card">
+        <div class="card-title">📢 Patrocinado</div>
+        <div class="ad-container">
+          <script src="https://pl31017202.profitableratecpmnetwork.com/b9/57/cb/b957cbd9d1bd9f15f3751bc709a8e079.js"></script>
+        </div>
+      </div>
+
+      <!-- Top Activos -->
+      <div class="card">
+        <div class="card-title">🔥 Tendencias de Criptomonedas</div>
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+          {
+            "colorTheme": "dark",
+            "dateRange": "12M",
+            "showChart": false,
+            "locale": "es",
+            "width": "100%",
+            "height": "400",
+            "isTransparent": true,
+            "showSymbolLogo": true,
+            "tabs": [
+              {
+                "title": "Cripto",
+                "symbols": [
+                  { "s": "BITSTAMP:BTCUSD" },
+                  { "s": "BITSTAMP:ETHUSD" },
+                  { "s": "BINANCE:SOLUSD" },
+                  { "s": "BINANCE:XRPUSD" },
+                  { "s": "BINANCE:BNBUSD" }
+                ]
+              }
+            ]
+          }
+          </script>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Crypto Central - Noticias financieras y datos de mercado en tiempo real.</p>
+  </footer>
+
+  <!-- Traductor Multilingüe de Google -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'en,es,pt,fr,de,it,ru,zh-CN,ja',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

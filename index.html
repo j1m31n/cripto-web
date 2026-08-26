@@ -2,36 +2,48 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crypto Central | Gana Satoshis</title>
+<title>Crypto Central | Noticias, Precios y Gana BTC</title>
+<link rel="icon" href="data:,">
 <style>
 :root{--bg:#080a12;--card:#12151f;--accent:#38bdf8;--green:#22c55e;--text:#e5e7eb;--muted:#8b93a5;--border:#1f2937}
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:system-ui;background:var(--bg);color:var(--text)}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:system-ui;background:var(--bg);color:var(--text);line-height:1.6}
 header{position:sticky;top:0;z-index:20;background:rgba(12,15,28,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
 .logo{font-weight:900;font-size:1.4rem;color:var(--accent)} .logo span{color:#fff}
 .container{max-width:1300px;margin:0 auto;padding:12px;display:grid;grid-template-columns:1fr;gap:14px}
 @media(min-width:1000px){.container{grid-template-columns:2.6fr 1fr}}
 .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:14px}
-.ad-slot{display:flex;justify-content:center;background:#0a0c15;border:1px solid var(--border);border-radius:10px;margin:10px 0;padding:20px 8px 10px 8px;position:relative}
+.card h2{font-size:1rem;margin-bottom:10px;color:#fff;border-left:3px solid var(--accent);padding-left:10px}
+.ad-slot{display:flex;justify-content:center;background:#0a0c15;border:1px solid var(--border);border-radius:10px;margin:12px 0;padding:12px;position:relative;min-height:80px}
+.ad-slot::before{content:"Publicidad";position:absolute;top:-8px;left:10px;background:var(--card);font-size:9px;color:var(--muted);padding:0 6px;letter-spacing:1px}
+.news-item{padding:10px 0;border-bottom:1px solid var(--border);font-size:0.85rem}
 </style>
 </head>
 <body>
-<header><div class="logo">⚡ Crypto<span>Central</span></div><div style="background:var(--green);color:#000;padding:3px 10px;border-radius:20px;font-size:0.7rem;font-weight:800">● LIVE</div></header>
+<header><div class="logo">⚡ Crypto<span>Central</span></div><div style="background:var(--green);color:#000;padding:4px 10px;border-radius:20px;font-size:0.7rem;font-weight:800">● LIVE</div></header>
 
-<!-- BANNER ADSTERRA ARRIBA -->
-<div class="ad-slot" style="max-width:1300px;margin:10px auto"><script>atOptions={'key':'6f37c2f4df001045783f89604914d1d5','format':'iframe','height':60,'width':468,'params':{}};</script><script src="https://www.highrevenueformat.com/6f37c2f4df001045783f89604914d1d5/invoke.js"></script></div>
+<div style="max-width:1300px;margin:10px auto;padding:0 12px">
+<div class="ad-slot"><script>atOptions={'key':'6f37c2f4df001045783f89604914d1d5','format':'iframe','height':60,'width':468,'params':{}};</script><script src="https://www.highrevenueformat.com/6f37c2f4df001045783f89604914d1d5/invoke.js"></script></div>
+</div>
 
 <div class="container">
 <main>
-<div class="card"><div style="height:380px" id="tv_chart"></div></div>
+<div class="card"><h2>📈 Bitcoin Hoy</h2><div style="height:400px" id="tv_chart"></div></div>
 <div class="ad-slot"><script>atOptions={'key':'6f37c2f4df001045783f89604914d1d5','format':'iframe','height':60,'width':468,'params':{}};</script><script src="https://www.highrevenueformat.com/6f37c2f4df001045783f89604914d1d5/invoke.js"></script></div>
+<div class="card"><h2>📰 Últimas Noticias</h2>
+<div class="news-item"><strong>BTC supera los 79k:</strong> Fuerte impulso alcista esta noche.</div>
+<div class="news-item"><strong>FaucetPay:</strong> La mejor wallet para micro pagos de cripto.</div>
+<div class="news-item"><strong>A-ADS paga en BTC directo:</strong> Sin mínimo.</div>
+</div>
 </main>
 <aside>
-<div class="card" style="border:1px solid var(--accent)">
-<div style="font-weight:800;color:var(--accent);margin-bottom:10px">💰 Gana BTC - Paga a FaucetPay</div>
+<div class="card" style="border:1px solid var(--accent);box-shadow:0 0 20px rgba(56,189,248,0.15)">
+<div style="font-weight:800;color:var(--accent);margin-bottom:10px;font-size:0.9rem">💰 Gana BTC - Paga a FaucetPay</div>
 <div style="display:flex;justify-content:center">
 <iframe data-aa='2453377' src='//ad.a-ads.com/2453377?size=300x250' style='width:300px; height:250px; border:0; padding:0; overflow:hidden; background-color: transparent;'></iframe>
 </div>
+<p style="font-size:0.65rem;color:var(--muted);text-align:center;margin-top:8px">Tu vista ayuda a pagar la web y va a tu FaucetPay</p>
 </div>
+<div class="card"><h2>🔗 Links</h2><p style="font-size:0.8rem;color:var(--muted)">FaucetPay.io<br>A-ADS.com<br>GitHub</p></div>
 </aside>
 </div>
 <script src="https://s3.tradingview.com/tv.js"></script>

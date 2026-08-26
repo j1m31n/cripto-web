@@ -4,37 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crypto Central | Gana Satoshis + Noticias Cripto en Vivo</title>
-  <meta name="description" content="Portal de noticias cripto en vivo, gráficos y faucets que pagan directo a FaucetPay.">
+  <meta name="description" content="Noticias cripto 24/7 y los mejores faucets que pagan directo a FaucetPay.">
   <style>
-    :root { --bg:#080a12; --card:#12151f; --accent:#38bdf8; --green:#22c55e; --text:#e5e7eb; --muted:#9ca3af; --border:#1f2937; }
+    :root { --bg:#080a12; --card:#12151f; --accent:#38bdf8; --green:#22c55e; --text:#e5e7eb; --muted:#8b93a5; --border:#1f2937; }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+    body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
     header{position:sticky;top:0;z-index:20;background:rgba(12,15,28,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
     .logo{font-weight:900;font-size:1.4rem;color:var(--accent)} .logo span{color:#fff}
-    .badge-live{background:var(--green);color:#000;padding:3px 10px;border-radius:20px;font-size:0.7rem;font-weight:800;animation:pulse 2s infinite}
-    @keyframes pulse{0%{opacity:1} 50%{opacity:.6} 100%{opacity:1}}
-    .ticker{border-bottom:1px solid var(--border);background:#0f1220}
-    .container{max-width:1300px;margin:0 auto;padding:15px;display:grid;grid-template-columns:1fr;gap:16px}
+    .badge-live{background:var(--green);color:#000;padding:3px 10px;border-radius:20px;font-size:0.7rem;font-weight:800}
+    .container{max-width:1300px;margin:0 auto;padding:12px;display:grid;grid-template-columns:1fr;gap:14px}
     @media(min-width:1000px){.container{grid-template-columns:2.6fr 1fr}}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:16px}
-    .card-title{font-weight:800;color:var(--accent);margin-bottom:12px;font-size:1.05rem;border-bottom:1px solid var(--border);padding-bottom:8px}
-    .ad-slot{display:flex;justify-content:center;align-items:center;background:#0a0c15;border:1px solid var(--border);border-radius:10px;margin:12px 0;padding:8px;overflow:hidden;min-height:70px}
-    .ad-slot.sidebar{ min-height:260px; }
-    .faucet-item{display:flex;justify-content:space-between;align-items:center;background:#0f1220;border:1px solid var(--border);padding:14px;border-radius:10px;margin-bottom:10px;text-decoration:none;color:#fff;transition:.2s}
-    .faucet-item:hover{border-color:var(--accent);transform:translateY(-1px)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:14px}
+    .card-title{font-weight:800;color:var(--accent);margin-bottom:12px;font-size:1.05rem;border-bottom:1px solid var(--border);padding-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+    .ad-slot{position:relative;display:flex;justify-content:center;align-items:center;background:#0a0c15;border:1px solid var(--border);border-radius:10px;margin:10px 0;padding:22px 8px 10px 8px;overflow:hidden;min-height:70px}
+    .ad-slot::before{content:'Publicidad';position:absolute;top:4px;left:10px;font-size:0.6rem;color:var(--muted);letter-spacing:0.6px;text-transform:uppercase}
+    .ad-slot.sidebar{min-height:270px;padding-top:24px}
+    .ad-slot.sidebar::before{content:'Patrocinador'}
+    .faucet-item{display:flex;justify-content:space-between;align-items:center;background:#0f1220;border:1px solid #2a3447;padding:14px;border-radius:10px;margin-bottom:10px;text-decoration:none;color:#fff}
+    .faucet-item:hover{border-color:var(--accent)}
     .btn-claim{background:var(--accent);color:#000;padding:5px 14px;border-radius:20px;font-weight:800;font-size:0.8rem}
-    footer{text-align:center;padding:25px;color:var(--muted);font-size:0.8rem;border-top:1px solid var(--border);margin-top:20px}
+    .news-item{padding:12px 0;border-bottom:1px solid var(--border)}
+    .news-item a{color:var(--text);text-decoration:none;font-weight:600;font-size:0.92rem}
+    .news-item a:hover{color:var(--accent)}
+    footer{text-align:center;padding:25px;color:var(--muted);font-size:0.8rem;border-top:1px solid var(--border);margin-top:10px}
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">⚡ Crypto<span>Central</span> <span class="badge-live">● LIVE</span></div>
-  <div style="font-size:0.8rem;color:var(--muted)">Pagos a FaucetPay</div>
+  <div class="logo">⚡ Crypto<span>Central</span></div>
+  <div class="badge-live">● LIVE</div>
 </header>
 
-<!-- TICKER CRIPTO -->
-<div class="ticker">
+<!-- TICKER -->
+<div style="background:#0f1220;border-bottom:1px solid var(--border)">
   <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
@@ -43,8 +46,7 @@
   </div>
 </div>
 
-<!-- BANNER SUPERIOR 468x60 - COD2 -->
-<div style="max-width:1300px;margin:10px auto 0;padding:0 15px">
+<div style="max-width:1300px;margin:0 auto;padding:0 12px">
   <div class="ad-slot">
     <script>atOptions = {'key' : '6f37c2f4df001045783f89604914d1d5','format' : 'iframe','height' : 60,'width' : 468,'params' : {}};</script>
     <script src="https://www.highrevenueformat.com/6f37c2f4df001045783f89604914d1d5/invoke.js"></script>
@@ -53,35 +55,34 @@
 
 <div class="container">
   <main>
-    <div class="card">
-      <div class="card-title">📈 Mercado en Vivo</div>
-      <div style="height:420px"><div id="tv_chart" style="height:100%"></div></div>
+    <!-- 1. FAUCET ARRIBA - DONDE MAS SE GANA -->
+    <div class="card" style="border:1px solid var(--accent); background: linear-gradient(180deg, #12151f, #0f1220);">
+      <div class="card-title">🚰 Top Faucets que pagan a FaucetPay <span style="font-size:0.6rem;background:var(--green);color:#000;padding:3px 8px;border-radius:10px">PAGO INSTANTANEO</span></div>
+      <a class="faucet-item" href="TU_LINK_FAUCETPAY_1" target="_blank"><span>🔥 FreeBTC - 50 sats / 5 min</span><span class="btn-claim">CLAIM</span></a>
+      <a class="faucet-item" href="TU_LINK_FAUCETPAY_2" target="_blank"><span>⚡ AutoFaucet - Reclamo 24h automático</span><span class="btn-claim" style="background:var(--green)">AUTO</span></a>
+      <a class="faucet-item" href="TU_LINK_FAUCETPAY_3" target="_blank"><span>💎 Cointiply - El que más paga</span><span class="btn-claim">GANAR</span></a>
+      <div style="font-size:0.7rem;color:var(--muted);margin-top:6px">* Cobro directo a FaucetPay sin mínimo. Reemplaza TU_LINK_FAUCETPAY por tu referido.</div>
     </div>
 
-    <!-- BANNER INTERMEDIO 468x60 - COD2 repetido queda muy bien -->
+    <div class="card">
+      <div class="card-title">📈 Mercado en Vivo</div>
+      <div style="height:380px"><div id="tv_chart" style="height:100%"></div></div>
+    </div>
+
     <div class="ad-slot">
       <script>atOptions = {'key' : '6f37c2f4df001045783f89604914d1d5','format' : 'iframe','height' : 60,'width' : 468,'params' : {}};</script>
       <script src="https://www.highrevenueformat.com/6f37c2f4df001045783f89604914d1d5/invoke.js"></script>
     </div>
 
-    <div class="card" style="border-color:var(--accent)">
-      <div class="card-title">🚰 Top Faucets FaucetPay <span style="font-size:0.65rem;background:var(--green);color:#000;padding:3px 8px;border-radius:10px">PAGO INSTANTANEO</span></div>
-      <a class="faucet-item" href="TU_LINK_FAUCETPAY_1" target="_blank"><span>🔥 FreeBTC - 50 sats / 5 min</span><span class="btn-claim">CLAIM</span></a>
-      <a class="faucet-item" href="TU_LINK_FAUCETPAY_2" target="_blank"><span>⚡ AutoFaucet - Reclamo automático</span><span class="btn-claim" style="background:var(--green)">AUTO</span></a>
-      <a class="faucet-item" href="TU_LINK_FAUCETPAY_3" target="_blank"><span>💎 Cointiply - El que más paga</span><span class="btn-claim">GANAR</span></a>
-    </div>
-
     <div class="card">
       <div class="card-title">🌐 Noticias Cripto Auto-Actualizables <span id="upd" style="font-size:0.7rem;color:var(--muted)"></span></div>
-      <div id="news" style="display:grid;gap:12px">Cargando noticias...</div>
+      <div id="news">Cargando noticias...</div>
     </div>
   </main>
 
   <aside>
-    <!-- BANNER SIDEBAR 300x250 - COD3 -->
     <div class="card">
-      <div class="card-title">💰 Patrocinador</div>
-      <div class="ad-slot sidebar">
+      <div class="ad-slot sidebar" style="margin:0">
         <script>atOptions = {'key' : 'e47511606dbb9249a32cf029f22b26d2','format' : 'iframe','height' : 250,'width' : 300,'params' : {}};</script>
         <script src="https://www.highrevenueformat.com/e47511606dbb9249a32cf029f22b26d2/invoke.js"></script>
       </div>
@@ -91,7 +92,7 @@
       <div class="card-title">🔥 Tendencias</div>
       <div class="tradingview-widget-container">
         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
-        {"colorTheme": "dark","dateRange": "12M","showChart": false,"locale": "es","width": "100%","height": "400","isTransparent": true,"showSymbolLogo": true,"tabs": [{"title": "Cripto","symbols": [{"s": "BITSTAMP:BTCUSD"},{"s": "BITSTAMP:ETHUSD"},{"s": "BINANCE:SOLUSD"}]}]}
+        {"colorTheme": "dark","dateRange": "12M","showChart": false,"locale": "es","width": "100%","height": "380","isTransparent": true,"showSymbolLogo": true,"tabs": [{"title": "Cripto","symbols": [{"s": "BITSTAMP:BTCUSD"},{"s": "BITSTAMP:ETHUSD"},{"s": "BINANCE:SOLUSD"}]}]}
         </script>
       </div>
     </div>
@@ -100,7 +101,7 @@
 
 <footer>© 2026 Crypto Central - Datos en vivo 24/7 - Pagos vía FaucetPay</footer>
 
-<!-- COD1 - SOCIAL BAR FLOTANTE (Va al final para no tapar nada) -->
+<!-- CODIGO SOCIAL BAR - VA AL FINAL -->
 <script src="https://pl31017202.profitableratecpmnetwork.com/b9/57/cb/b957cbd9d1bd9f15f3751bc709a8e079.js"></script>
 
 <script src="https://s3.tradingview.com/tv.js"></script>
@@ -110,9 +111,9 @@ async function loadNews(){
   try{
     const r=await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss');
     const j=await r.json();
-    document.getElementById('news').innerHTML=j.items.slice(0,6).map(i=>`<div style="padding:10px 0;border-bottom:1px solid var(--border)"><a href="${i.link}" target="_blank" style="color:#e5e7eb;text-decoration:none;font-weight:600">${i.title}</a><div style="color:var(--muted);font-size:0.75rem;margin-top:4px">${new Date(i.pubDate).toLocaleDateString('es-AR')}</div></div>`).join('');
-    document.getElementById('upd').innerText=' • Actualizado '+new Date().toLocaleTimeString();
-  }catch(e){ document.getElementById('news').innerHTML='No se pudo cargar noticias, reintentando...'; }
+    document.getElementById('news').innerHTML=j.items.slice(0,6).map(i=>`<div class="news-item"><a href="${i.link}" target="_blank">${i.title}</a><div style="color:var(--muted);font-size:0.7rem;margin-top:4px">${new Date(i.pubDate).toLocaleDateString('es-AR')} • CoinTelegraph</div></div>`).join('');
+    document.getElementById('upd').innerText='• Actualizado '+new Date().toLocaleTimeString();
+  }catch(e){ document.getElementById('news').innerHTML='Error cargando noticias.'; }
 }
 loadNews(); setInterval(loadNews,300000);
 </script>
